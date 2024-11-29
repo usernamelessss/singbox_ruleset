@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "68bd384lrg.execute-api.ap-northeast-1.amazonaws.com"
+      ]
+    }
+  ],
+  "version": 2
+}

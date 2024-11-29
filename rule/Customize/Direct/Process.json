@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "process_name": [
+        "heroes_x64.exe",
+        "TCGame.exe",
+        "HeroesLauncher.exe",
+        "TCGCheckPCInfo.exe",
+        "tcUpdate.exe",
+        "srcds_x64.exe",
+        "srcds.exe",
+        "GameToTCG.exe",
+        "BlackXchg.aes",
+        "BlackCipher64.aes",
+        "HipsDaemon.exe"
+      ]
+    }
+  ],
+  "version": 2
+}
