@@ -3,7 +3,8 @@
     "rules": [
         {
             "domain": [
-                "browserleaks.com"
+                "browserleaks.com",
+                "dl.google.com"
             ]
         }
     ]
