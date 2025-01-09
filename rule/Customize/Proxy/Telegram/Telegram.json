@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "process_name": [
+        "tdl.exe"
+      ]
+    }
+  ],
+  "version": 3
+}
