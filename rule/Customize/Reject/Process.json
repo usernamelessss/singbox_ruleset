@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "process_name": [
+        "Photoshop.exe"
+      ]
+    }
+  ],
+  "version": 3
+}
