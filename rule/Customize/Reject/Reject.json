@@ -3,6 +3,7 @@
     {
       "process_name": [
         "Photoshop.exe",
+        "CRWindowsClientService.exe",
         "FontCreator.exe"
       ],
       "domain": [
