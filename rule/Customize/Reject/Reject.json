@@ -1,6 +1,13 @@
 {
   "rules": [
     {
+      "domain_keyword": [
+        "adobe"
+      ],
+      "domain_suffix": [
+        "adobe.com",
+        "adobe.io"
+      ],
       "process_name": [
         "Photoshop.exe",
         "CRWindowsClientService.exe",
