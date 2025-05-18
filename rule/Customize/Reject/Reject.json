@@ -1,0 +1,14 @@
+{
+  "rules": [
+    {
+      "process_name": [
+        "Photoshop.exe",
+        "FontCreator.exe"
+      ],
+      "domain": [
+        "www.high-logic.com"
+      ]
+    }
+  ],
+  "version": 3
+}
