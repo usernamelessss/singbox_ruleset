@@ -11,6 +11,7 @@
       "process_name": [
         "Photoshop.exe",
         "CRWindowsClientService.exe",
+        "msedgewebview2.exe",
         "FontCreator.exe"
       ],
       "domain": [
