@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "process_path": [
+        "D://game_home//Nexon//TW//Nexon Launcher//nexon_runtime.exe",
+        "D://game_home//Nexon//TW//Nexon Launcher//nexon_updater.exe",
+        "D://game_home//Nexon//TW//Nexon Launcher//Uninstall.exe",
+        "D://game_home//Nexon//TW//Nexon Launcher//nexon_launcher.exe",
+        "D://game_home//Nexon//TW//Nexon Launcher//bin//nexon_agent.exe",
+        "D://game_home//Nexon//TW//tw_vindictus//appdata//zh-TW//heroes.exe",
+        "D://game_home//Nexon//TW//tw_vindictus//appdata//zh-TW//heroes_x64.exe",
+        "D://game_home//Nexon//TW//tw_vindictus//appdata//zh-TW//srcds.exe",
+        "D://game_home//Nexon//TW//tw_vindictus//appdata//zh-TW//srcds_x64.exe",
+        "D://game_home//Nexon//TW//tw_vindictus//appdata//zh-TW//NGClient.aes",
+        "D://game_home//Nexon//TW//tw_vindictus//appdata//zh-TW//NGClient64.aes"
+      ]
+    }
+  ],
+  "version": 3
+}
