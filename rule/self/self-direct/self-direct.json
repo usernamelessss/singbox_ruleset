@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {
+      "domain": [
+        "68bd384lrg.execute-api.ap-northeast-1.amazonaws.com",
+        "yacd.metacubex.one",
+        "zxcs",
+        "x-superflash.com",
+        "su.x-theflash.com",
+        "icon-icons.com",
+        "cdn.icon-icons.com"
+      ]
+    }
+  ],
+  "version": 4
+}
