@@ -1,19 +1,24 @@
 {
-  "rules": [
-    {
-      "domain": [
-        "68bd384lrg.execute-api.ap-northeast-1.amazonaws.com",
-        "yacd.metacubex.one",
-        "zxcs",
-        "x-superflash.com",
-        "su.x-theflash.com",
-        "icon-icons.com",
-        "cdn.icon-icons.com",
-        "simgv.com",
-        "board.zash.run.place",
-        "www.69shuba.com"
-      ]
-    }
-  ],
-  "version": 3
+    "rules":
+    [
+        {
+            "domain":
+            [
+                "68bd384lrg.execute-api.ap-northeast-1.amazonaws.com",
+                "yacd.metacubex.one",
+                "zxcs",
+                "x-superflash.com",
+                "su.x-theflash.com",
+                "icon-icons.com",
+                "cdn.icon-icons.com",
+                "simgv.com",
+                "board.zash.run.place"
+            ],
+            "domain_keyword":
+            [
+                "69shuba"
+            ]
+        }
+    ],
+    "version": 3
 }
