@@ -2,24 +2,6 @@
   "rules": [
     {
       "process_path": [
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\GameToTCG.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\_chn_AdBalloonExt.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\bcdedit.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\bugreport.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\heroes.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\heroes_x64.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\HeroesLauncher.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\NMService.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\srcds.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\srcds_x64.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\NGClient.aes",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\Heroes-CN\\zh-CN\\NGClient64.aes",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\TCGAME\\TCGame.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\TCGAME\\TCGameService.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\TCGAME\\TCGCheckPCInfo.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\TCGAME\\tcUpdate.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\TCGAME\\unins000.exe",
-        "D:\\game_home\\Heroes_Tiancity\\install_home\\TCGAME\\wow_helper.exe",
         "D:\tools_home\\lanzouyun\\蓝奏云盘.exe"
       ]
     }
