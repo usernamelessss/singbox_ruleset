@@ -17,8 +17,11 @@
                 "www.10000txt.com",
                 "www.freexiaoshuo.com",
                 "www.vdm11.com",
-                "vip.dytt-cine.com",
                 "yesicon.app"
+            ],
+            "domain_regex":
+            [
+                "^vip\\.dytt-[a-zA-Z0-9]+\\.com)$"
             ]
         }
     ],
