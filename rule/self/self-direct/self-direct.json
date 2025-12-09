@@ -18,10 +18,6 @@
                 "www.freexiaoshuo.com",
                 "www.vdm11.com",
                 "yesicon.app"
-            ],
-            "domain_regex":
-            [
-                "^vip\\.dytt-[a-zA-Z0-9]+\\.com)$"
             ]
         }
     ],
