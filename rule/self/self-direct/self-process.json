@@ -2,7 +2,8 @@
   "rules": [
     {
       "process_path": [
-        "D:\tools_home\\lanzouyun\\蓝奏云盘.exe"
+        "D:\tools_home\\lanzouyun\\蓝奏云盘.exe",
+        "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\warp-svc.exe"
       ]
     }
   ],
