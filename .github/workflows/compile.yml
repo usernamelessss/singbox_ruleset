@@ -40,7 +40,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           find rule -type f -name "*.srs" -exec git add {} +
           if ! git diff --staged --quiet; then
-            commit_msg="🚀 release: 发布新版本"$'\n\n'"$(cat compiled_files.txt)"
+            commit_msg="🚀 release: 发布新版本 Action 自动编译 singbox json 源文件为二进制 srs 文件. "$'\n\n'"$(cat compiled_files.txt)"
             git commit -m "$commit_msg"
             git push
           fi
