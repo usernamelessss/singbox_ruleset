@@ -1,11 +1,13 @@
 {
-  "rules": [
-    {
-      "process_path": [
-        "D:/tools_home/lanzouyun/蓝奏云盘.exe",
-        "D:/Huorong/Sysdiag/bin/HipsDaemon.exe"
-      ]
-    }
-  ],
-  "version": 3
+    "rules":
+    [
+        {
+            "process_path":
+            [
+                "D:\\tools_home\\lanzouyun\\蓝奏云盘.exe",
+                "D:\\Huorong\\Sysdiag\\bin\\HipsDaemon.exe"
+            ]
+        }
+    ],
+    "version": 3
 }
