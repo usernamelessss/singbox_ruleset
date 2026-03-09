@@ -23,18 +23,29 @@ jobs:
             | cut -d '"' -f 4 \
             | wget -qO- -i - | tar xz
           sudo mv sing-box-*/sing-box /usr/local/bin/
-      
+
 
       - name: Compile JSON to SRS
         run: |
-          cd rule
           > compiled_files.txt
-          for json in *.json; do
-            [ -f "$json" ] || continue
+          find rule -type f -name "*.json" | while read json; do
             srs="${json%.json}.srs"
             sing-box rule-set compile "$json" -o "$srs"
-            echo "编译 $json 为 $srs 二进制文件" >> compiled_files.txt
+            echo "编译 ${json#rule/} 为 ${srs#rule/} 二进制文件" >> compiled_files.txt
           done
+
+      - name: Commit SRS files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          find rule -type f -name "*.srs" -exec git add {} +
+          if ! git diff --staged --quiet; then
+            commit_msg="🚀 release: 发布新版本"$'\n\n'"$(cat compiled_files.txt)"
+            git commit -m "$commit_msg"
+            git push
+          fi
+          rm -f compiled_files.txt
+      
 
       - name: Commit SRS files
         run: |
