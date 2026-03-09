@@ -23,7 +23,9 @@ jobs:
             | cut -d '"' -f 4 \
             | wget -qO- -i - | tar xz
           sudo mv sing-box-*/sing-box /usr/local/bin/
+      
 
+      - name: Compile JSON to SRS
         run: |
           cd rule
           > compiled_files.txt
