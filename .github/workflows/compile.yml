@@ -18,10 +18,12 @@ jobs:
 
       - name: Install sing-box
         run: |
-          wget -qO- https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-*-linux-amd64.tar.gz | tar xz
-          sudo mv sing-box-*/sing-box /usr/local/bin/
+          curl -s https://api.github.com/repos/SagerNet/sing-box/releases/latest \
+          | grep "browser_download_url.*linux-amd64.tar.gz" \
+          | cut -d '"' -f 4 \
+          | wget -qO- -i - | tar xz
+    sudo mv sing-box-*/sing-box /usr/local/bin/
 
-      - name: Compile JSON to SRS
         run: |
           cd rule
           > compiled_files.txt
