@@ -1,0 +1,45 @@
+name: Compile Sing-box Rules
+
+on:
+  push:
+    paths:
+      - 'rule/*.json'
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install sing-box
+        run: |
+          wget -qO- https://github.com/SagerNet/sing-box/releases/latest/download/sing-box-*-linux-amd64.tar.gz | tar xz
+          sudo mv sing-box-*/sing-box /usr/local/bin/
+
+      - name: Compile JSON to SRS
+        run: |
+          cd rule
+          > compiled_files.txt
+          for json in *.json; do
+            [ -f "$json" ] || continue
+            srs="${json%.json}.srs"
+            sing-box rule-set compile "$json" -o "$srs"
+            echo "编译 $json 为 $srs 二进制文件" >> compiled_files.txt
+          done
+
+      - name: Commit SRS files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add rule/*.srs
+          if ! git diff --staged --quiet; then
+            commit_msg="🚀 release: 发布新版本"$'\n\n'"$(cat rule/compiled_files.txt)"
+            git commit -m "$commit_msg"
+            git push
+          fi
+          rm -f rule/compiled_files.txt
