@@ -15,6 +15,8 @@ window[Plugin.id] = window[Plugin.id] || {
 const state = window[Plugin.id]
 
 const onRename = async () => {
+    console.log(`onRename`);
+
     let file = await Plugins.picker.single(
         "请选择要重命名的检测配置文件",
         jsonFiles.map((v) => ({
@@ -25,6 +27,7 @@ const onRename = async () => {
     );
     const text = await Plugins.ReadFile(`${BASE_DIR}/${file.name}`);
 
+    console.log(`configsMap：`, JSON.parse(text));
     const configsMap = JSON.parse(text);
 
     await beautifyNodeName(new Map(Object.entries(configsMap)))
@@ -48,6 +51,8 @@ const onSubscribe = async (/** @type {any} */ proxies) => {
         const result = await beautifyNodeName(new Map(Object.entries(configsMap)), proxies);
 
         Plugins.message.success(`订阅更新成功`);
+        console.log(`result=>`, result);
+        console.log(`proxies=>`, proxies);
         // 关键点：某些插件钩子不仅要求你修改 store，还需要返回处理后的 proxies
         return result || proxies;
 
@@ -68,23 +73,17 @@ async function beautifyNodeName(configsMap, oldProxies) {
 
     const id = currentSub['id'];
     const result = configsMap.get(`result`) || [];
-    // const realProiex = configsMap.get(`realProiex`) || [];
 
     // 存入 Map
     result.forEach(item => {
-        // realProiex.forEach(item => {
         const nodeName = Object.keys(item)[0];
         configsMap.set(nodeName, item[nodeName]);
     });
-    console.log(`oldProxies=>`, oldProxies);
-    console.log(`configsMap=>`, configsMap);
-
     // 改用 map，明确返回转换后的对象
     const addon = (oldProxies ?? proxies).map(proxie => {
         let tag = proxie['tag'];
         // const newVar = configsMap.get(tag);
         let entry = findFirstMatchingEntry(configsMap, tag);
-        // console.log(`findFirstMatchingEntry=>`, entry);
 
         if (!entry) return proxie; // 没找到数据，原样返回
         // if (!newVar) return proxie; // 没找到数据，原样返回
@@ -112,6 +111,8 @@ async function beautifyNodeName(configsMap, oldProxies) {
 
 function findFirstMatchingEntry(map, tag) {
     for (let [key, value] of map.entries()) {
+        console.log(`findFirstMatchingEntry：`, key);
+
         if (key.includes(tag)) {
             return {key, value}; // 返回一个包含键值对的对象
         }
@@ -171,9 +172,7 @@ async function switchSelector(base, bearer, sel, nodeTag) {
 }
 
 async function detectIp() {
-    let len = 3;
-    for (let i = 1; i <= len; i++) {
-        console.log(`请求检测中[${i} / ${len}] 🔄 `)
+    for (let i = 1; i <= 3; i++) {
         try {
             const res = await Plugins.HttpGet(
                 'https://my.ippure.com/v1/info',
