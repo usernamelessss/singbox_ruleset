@@ -18,6 +18,30 @@ export default (Plugin) => {
 
             // 1. Identify and separate unique vs. duplicate proxies.
             for (let proxy of proxies) {
+                /*
+                proxy 结构：
+                    {
+                        "tag": "极速 专线 香港 02",
+                        "type": "anytls",
+                        "server": "www.wxline.hrryy.cn",
+                        "server_port": 30300,
+                        "password": "a66779fe-78d9-4d4e-85f9-b7e4bf9a3d42",
+                        "tls": {
+                            "enabled": true,
+                            "server_name": "speed.makagroup.sxvxr.com",
+                            "insecure": true,
+                            "alpn": [
+                                "h2",
+                                "http/1.1"
+                            ],
+                            "utls": {
+                                "enabled": true,
+                                "fingerprint": "chrome"
+                            }
+                        }
+                    }
+                 */
+
                 let endpoint = `${proxy.server}:${proxy.server_port || proxy.port}`;
                 if (seenEndpoints.has(endpoint)) {
                     removedProxies.push(proxy);
